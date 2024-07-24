@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Elastisk</title>
+</head>
+<body>
+<h1>Asterisk all data check everywhere</h1>
+<p><a href="{% url 'api:welcome' %}">Welcome</a></p>
+<p><a href="{% url 'api:info' %}">Info</a></p>
+<p><a href="{% url 'api:variable' %}">Variable</a></p>
+<p><a href="{% url 'api:bridges' %}">Bridges</a></p>
+<p><a href="{% url 'api:channels' %}">Channels</a></p>
+<p><a href="{% url 'api:states' %}">States</a></p>
+<p><a href="{% url 'api:endpoints' %}">Endpoints</a></p>
+<p><a href="{% url 'api:events' %}">Events</a></p>
+<p><a href="{% url 'api:mailboxes' %}">Mailbox</a></p>
+<p><a href="{% url 'api:stored' %}">Stored</a></p>
+<p><a href="{% url 'api:sounds' %}">Sounds</a></p>
+{% block content %}
+	
+{% endblock %}
+</body>
+</html>

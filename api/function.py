@@ -5,8 +5,8 @@ from requests.auth import HTTPBasicAuth
 def get_applications():
     # Replace these variables with your actual ARI credentials and Asterisk server details
     ARI_USERNAME = 'asterisk'
-    ARI_PASSWORD = '@Botirjon06'
-    ASTERISK_HOST = '192.168.30.48'
+    ARI_PASSWORD = 'Qosim123!'
+    ASTERISK_HOST = '192.168.30.56'
     ARI_PORT = '8088'  # Default ARI port
 
     # The URL for fetching channel data
@@ -27,8 +27,8 @@ def get_applications():
 def get_asterisk_info():
     # Replace these variables with your actual ARI credentials and Asterisk server details
     ARI_USERNAME = 'asterisk'
-    ARI_PASSWORD = '@Botirjon06'
-    ASTERISK_HOST = '192.168.30.48'
+    ARI_PASSWORD = 'Qosim123!'
+    ASTERISK_HOST = '192.168.30.56'
     ARI_PORT = '8088'  # Default ARI port
 
     # The URL for fetching channel data
@@ -49,8 +49,8 @@ def get_asterisk_info():
 def get_asterisk_ping():
     # Replace these variables with your actual ARI credentials and Asterisk server details
     ARI_USERNAME = 'asterisk'
-    ARI_PASSWORD = '@Botirjon06'
-    ASTERISK_HOST = '192.168.30.48'
+    ARI_PASSWORD = 'Qosim123!'
+    ASTERISK_HOST = '192.168.30.56'
     ARI_PORT = '8088'  # Default ARI port
 
     # The URL for fetching channel data
@@ -71,8 +71,8 @@ def get_asterisk_ping():
 def get_asterisk_modules():
     # Replace these variables with your actual ARI credentials and Asterisk server details
     ARI_USERNAME = 'asterisk'
-    ARI_PASSWORD = '@Botirjon06'
-    ASTERISK_HOST = '192.168.30.48'
+    ARI_PASSWORD = 'Qosim123!'
+    ASTERISK_HOST = '192.168.30.56'
     ARI_PORT = '8088'  # Default ARI port
 
     # The URL for fetching channel data
@@ -93,12 +93,12 @@ def get_asterisk_modules():
 def get_asterisk_logging():
     # Replace these variables with your actual ARI credentials and Asterisk server details
     ARI_USERNAME = 'asterisk'
-    ARI_PASSWORD = '@Botirjon06'
-    ASTERISK_HOST = '192.168.30.48'
+    ARI_PASSWORD = 'Qosim123!'
+    ASTERISK_HOST = '192.168.30.56'
     ARI_PORT = '8088'  # Default ARI port
 
     # The URL for fetching channel data
-    ARI_URL = f'http://{ASTERISK_HOST}:{ARI_PORT}/ari/asterisk/logging/'
+    ARI_URL = f'http://{ASTERISK_HOST}:{ARI_PORT}/ari/asterisk/logging'
 
     # Make the GET request to the ARI
     response = requests.get(ARI_URL, auth=HTTPBasicAuth(ARI_USERNAME, ARI_PASSWORD))
@@ -120,7 +120,7 @@ def get_asterisk_variable():
     ARI_PORT = '8088'  # Default ARI port
 
     # The URL for fetching channel data
-    ARI_URL = f'http://{ASTERISK_HOST}:{ARI_PORT}/ari/asterisk/variable/'
+    ARI_URL = f'http://{ASTERISK_HOST}:{ARI_PORT}/ari/asterisk/variable'
 
     # Make the GET request to the ARI
     response = requests.get(ARI_URL, auth=HTTPBasicAuth(ARI_USERNAME, ARI_PASSWORD))
@@ -142,7 +142,7 @@ def get_bridges():
     ARI_PORT = '8088'  # Default ARI port
 
     # The URL for fetching channel data
-    ARI_URL = f'http://{ASTERISK_HOST}:{ARI_PORT}/ari/bridges/'
+    ARI_URL = f'http://{ASTERISK_HOST}:{ARI_PORT}/ari/bridges'
 
     # Make the GET request to the ARI
     response = requests.get(ARI_URL, auth=HTTPBasicAuth(ARI_USERNAME, ARI_PASSWORD))
@@ -164,7 +164,7 @@ def get_channels():
     ARI_PORT = '8088'  # Default ARI port
 
     # The URL for fetching channel data
-    ARI_URL = f'http://{ASTERISK_HOST}:{ARI_PORT}/ari/channels/'
+    ARI_URL = f'http://{ASTERISK_HOST}:{ARI_PORT}/ari/channels'
 
     # Make the GET request to the ARI
     response = requests.get(ARI_URL, auth=HTTPBasicAuth(ARI_USERNAME, ARI_PASSWORD))
@@ -186,7 +186,7 @@ def get_deviceStates():
     ARI_PORT = '8088'  # Default ARI port
 
     # The URL for fetching channel data
-    ARI_URL = f'http://{ASTERISK_HOST}:{ARI_PORT}/ari/deviceStates/'
+    ARI_URL = f'http://{ASTERISK_HOST}:{ARI_PORT}/ari/deviceStates'
 
     # Make the GET request to the ARI
     response = requests.get(ARI_URL, auth=HTTPBasicAuth(ARI_USERNAME, ARI_PASSWORD))
@@ -230,7 +230,7 @@ def get_events():
     ARI_PORT = '8088'  # Default ARI port
 
     # The URL for fetching channel data
-    ARI_URL = f'http://{ASTERISK_HOST}:{ARI_PORT}/ari/events/'
+    ARI_URL = f'http://{ASTERISK_HOST}:{ARI_PORT}/ari/events'
 
     # Make the GET request to the ARI
     response = requests.get(ARI_URL, auth=HTTPBasicAuth(ARI_USERNAME, ARI_PASSWORD))
@@ -296,7 +296,7 @@ def get_recordings_stored():
     ARI_PORT = '8088'  # Default ARI port
 
     # The URL for fetching channel data
-    ARI_URL = f'http://{ASTERISK_HOST}:{ARI_PORT}/ari/recordings/stored/'
+    ARI_URL = f'http://{ASTERISK_HOST}:{ARI_PORT}/ari/recordings/stored'
 
     # Make the GET request to the ARI
     response = requests.get(ARI_URL, auth=HTTPBasicAuth(ARI_USERNAME, ARI_PASSWORD))
