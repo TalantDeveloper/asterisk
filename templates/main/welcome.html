@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    {% for server in servers %}
+        <div class="col-lg-6">
+            <div class="card">
+                <div class="card-header">
+                    <strong class="card-title text-success">{{ server.ip }}</strong>
+
+                </div>
+                <div class="card-body">
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Abonent</th>
+                            <th scope="col">Status</th>
+                            <th scope="col">Tech</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% for endpoint in server.endpoints %}
+                            <tr>
+                                <th scope="col">1</th>
+                                <th scope="col">{{ endpoint.abonent }}</th>
+                                <th scope="col">{{ endpoint.status }}</th>
+                                <th scope="col">{{ endpoint.technology }}</th>
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+
+
+{% endblock %}

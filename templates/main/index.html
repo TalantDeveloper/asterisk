@@ -1,5 +1,21 @@
 {% extends 'base.html' %}
-
+{% block title %}
+	Welcome -
+{% endblock %}
 {% block content %}
-	<p>Salom</p>
+
+<h1>Asterisk all data check everywhere</h1>
+<p><a href="{% url 'api:welcome' %}">Welcome</a></p>
+<p><a href="{% url 'api:info' %}">Info</a></p>
+<p><a href="{% url 'api:variable' %}">Variable</a></p>
+<p><a href="{% url 'api:bridges' %}">Bridges</a></p>
+<p><a href="{% url 'api:channels' %}">Channels</a></p>
+<p><a href="{% url 'api:states' %}">States</a></p>
+<p><a href="{% url 'api:endpoints' %}">Endpoints</a></p>
+<p><a href="{% url 'api:events' %}">Events</a></p>
+<p><a href="{% url 'api:mailboxes' %}">Mailbox</a></p>
+<p><a href="{% url 'api:stored' %}">Stored</a></p>
+<p><a href="{% url 'api:sounds' %}">Sounds</a></p>
+
+
 {% endblock %}
