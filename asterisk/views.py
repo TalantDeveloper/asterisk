@@ -5,7 +5,7 @@ from django.contrib import messages
 
 def login_view(request):
     if request.user.is_authenticated:
-        return redirect('main:index')
+        return redirect('main:welcome')
     else:
         if request.method == 'POST':
             username = request.POST['username']
@@ -14,10 +14,10 @@ def login_view(request):
             if user is not None:
                 login(request, user)
                 messages.add_message(request, messages.SUCCESS, f"{username} siz tizimga muvafaqqiyatli kirdingiz :)")
-                return redirect('main:index')
+                return redirect('main:welcome')
     return render(request, 'auth/login.html')
 
 
 def logout_view(request):
     logout(request)
-    return redirect('main:index')
+    return redirect('login')

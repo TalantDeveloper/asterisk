@@ -8,7 +8,10 @@ from .functions import get_server
 def welcome_view(request):
     user = request.user
     costumers = Costumer.objects.filter(user=user)
-    servers = get_server(costumers)
+    try:
+        servers = get_server(costumers)
+    except Exception as e:
+        servers = None
     print(servers)
     context = {
         'costumers': costumers,

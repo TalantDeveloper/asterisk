@@ -3,7 +3,7 @@
 {% block content %}
 
     {% for server in servers %}
-        <div class="col-lg-6">
+        <div class="col-lg-12">
             <div class="card">
                 <div class="card-header">
                     <strong class="card-title text-success">{{ server.ip }}</strong>
@@ -22,7 +22,7 @@
                         <tbody>
                         {% for endpoint in server.endpoints %}
                             <tr>
-                                <th scope="col">1</th>
+                                <th scope="col">{{ forloop.counter }}</th>
                                 <th scope="col">{{ endpoint.abonent }}</th>
                                 <th scope="col">{{ endpoint.status }}</th>
                                 <th scope="col">{{ endpoint.technology }}</th>
