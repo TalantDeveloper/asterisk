@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'rest_framework',
 
     'main.apps.MainConfig',
+    'subscriber.apps.SubscriberConfig',
 ]
 
 MIDDLEWARE = [
