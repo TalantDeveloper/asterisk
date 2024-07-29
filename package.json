@@ -1,0 +1,99 @@
+[
+  {
+    "id": "1722258071.4",
+    "name": "PJSIP/2003-00000004",
+    "state": "Ring",
+    "protocol_id": "Yzg4YzYxOWEzMDA3YWNiNTJkNDdjYjI0MTYyY2EwMjE.",
+    "caller": {
+      "name": "",
+      "number": "2051470"
+    },
+    "connected": {
+      "name": "CID:2051470",
+      "number": "995907850"
+    },
+    "accountcode": "",
+    "dialplan": {
+      "context": "macro-dialout-trunk",
+      "exten": "s",
+      "priority": 36,
+      "app_name": "Dial",
+      "app_data": "PJSIP/995907850@2051470,300,Tb(func-apply-sipheaders^s^1,(1))U(sub-send-obroute-email^995907850^995907850^1^1722258071^^2051470)"
+    },
+    "creationtime": "2024-07-29T18:01:11.054+0500",
+    "language": "en"
+  },
+  {
+    "id": "1722258071.5",
+    "name": "PJSIP/2051470-00000005",
+    "state": "Ringing",
+    "protocol_id": "655db8ac-b31d-4ca3-a1ba-79ed60984868",
+    "caller": {
+      "name": "CID:2051470",
+      "number": "995907850"
+    },
+    "connected": {
+      "name": "",
+      "number": "2051470"
+    },
+    "accountcode": "",
+    "dialplan": {
+      "context": "from-pstn",
+      "exten": "995907850",
+      "priority": 1,
+      "app_name": "AppDial",
+      "app_data": "(Outgoing Line)"
+    },
+    "creationtime": "2024-07-29T18:01:11.112+0500",
+    "language": "en"
+  },
+  //  boshqa
+  {
+    "id": "1722258012.3",
+    "name": "PJSIP/2003-00000003",
+    "state": "Ringing",
+    "protocol_id": "df0e7e85-2ba5-48b8-b950-ccd6ba5f77bf",
+    "caller": {
+      "name": "Botirjon",
+      "number": "2003"
+    },
+    "connected": {
+      "name": "995907850",
+      "number": "995907850"
+    },
+    "accountcode": "",
+    "dialplan": {
+      "context": "from-internal",
+      "exten": "2003",
+      "priority": 1,
+      "app_name": "AppDial",
+      "app_data": "(Outgoing Line)"
+    },
+    "creationtime": "2024-07-29T18:00:12.815+0500",
+    "language": "en"
+  },
+  {
+    "id": "1722258012.2",
+    "name": "PJSIP/2051470-00000002",
+    "state": "Ring",
+    "protocol_id": "66A7B673838A8000A7A1C_10.10.0.3:5060",
+    "caller": {
+      "name": "995907850",
+      "number": "995907850"
+    },
+    "connected": {
+      "name": "",
+      "number": ""
+    },
+    "accountcode": "",
+    "dialplan": {
+      "context": "macro-dial-one",
+      "exten": "s",
+      "priority": 58,
+      "app_name": "Dial",
+      "app_data": "PJSIP/2003/sip:2003@192.168.30.145:59620;rinstance=d7ec6d02fc0f8f18,,HhtrIb(func-apply-sipheaders^s^1)"
+    },
+    "creationtime": "2024-07-29T18:00:12.756+0500",
+    "language": "en"
+  }
+]
