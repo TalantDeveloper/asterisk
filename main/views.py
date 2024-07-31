@@ -11,7 +11,7 @@ def welcome_view(request):
     try:
         servers = get_server(costumers)
     except Exception as e:
-        servers = None
+        pass
     print(servers)
     context = {
         'costumers': costumers,

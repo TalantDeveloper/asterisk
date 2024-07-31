@@ -2,22 +2,30 @@ import requests
 from requests.auth import HTTPBasicAuth
 
 
+def check_ping(ip, port, username, password):
+    response = requests.get(f"http://{ip}:{port}/ari/asterisk/ping",
+                            auth=HTTPBasicAuth(username, password)
+                            )
+    if response.status_code == 200:
+        ping = response.json()['ping']
+    else:
+        ping = -1
+    return ping
+
+
 def get_server(costumers):
     data = []
     for costumer in costumers:
+        if not costumer.server.status:
+            continue
         server = costumer.server
         ip = server.ip
         port = server.port
         username = server.username
         password = server.password
 
-        response = requests.get(f"http://{ip}:{port}/ari/asterisk/ping",
-                                auth=HTTPBasicAuth(username, password)
-                                )
-        if response.status_code == 200:
-            ping = response.json()['ping']
-        else:
-            ping = -1
+        ping = check_ping(ip, port, username, password)
+
         response = requests.get(f"http://{ip}:{port}/ari/asterisk/info",
                                 auth=HTTPBasicAuth(username, password))
         if response.status_code == 200:
@@ -63,6 +71,8 @@ def get_server(costumers):
 def get_endpoint(costumers):
     data = []
     for costumer in costumers:
+        if not costumer.server.status:
+            continue
         server = costumer.server
         ip = server.ip
         port = server.port
